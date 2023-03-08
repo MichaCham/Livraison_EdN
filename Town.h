@@ -40,6 +40,8 @@ public:
 
     Town TownDist(Town two);
 
+    void toString() const;
+
 protected:
     std::string name;
     float longitude;

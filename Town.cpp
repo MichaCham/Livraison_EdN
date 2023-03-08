@@ -77,6 +77,10 @@ Town Town::TownDist(Town two){
     }
 }
 
+void Town::toString() const {
+    std::cout << "name " << name << ", latitude " << latitude << ", longitude " << longitude << ", TownNumber " << townNumber << std::endl;
+}
+
 
 
 
