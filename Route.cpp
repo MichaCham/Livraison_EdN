@@ -7,11 +7,33 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <fstream>
+#include <cstring>
+
 
 Route::Route(std::vector<Town> TownList){
-    setListTown(TownList);
-    CurrentTown = ListTown[0];
-    FirstTown = ListTown[1];
+    ListTown = TownList;
+    CurrentTown = Town("",0,0,0);
+    FirstTown = Town("",0,0,0);
+}
+
+float Route::ConvertToRadiant(float deg){
+    return (Pi * deg) / 180;
+}
+
+void Route::ReadFile (std::string EntryFile){
+    std::ifstream file(EntryFile);
+    int townNumber;
+    file >> townNumber;
+    std::cout << townNumber << std::endl;
+    for (int i = 0; i < townNumber; i++){
+        std::string name;
+        float latitude;
+        float longitude;
+        file >> name >> latitude >> longitude;
+        std::cout << name << " " << latitude << " " << longitude << " " << i << std::endl;
+        ListTown.push_back(Town(name, ConvertToRadiant(latitude), ConvertToRadiant(longitude),i));
+    }
 }
 
 const std::vector<Town> &Route::getListTown() const {
@@ -37,3 +59,8 @@ const Town &Route::getFirstTown() const {
 void Route::setFirstTown(const Town &firstTown) {
     FirstTown = firstTown;
 }
+
+const int *Route::getSolution() const {
+    return Solution;
+}
+

@@ -8,6 +8,19 @@
 #include <iostream>
 #include <cmath>
 
+Town::Town(std::string name2, float longitude2, float latitude2, float TownNumber){
+    setName(name2);
+    setLatitude(latitude2);
+    setLongitude(longitude2);
+    setTownNumber(TownNumber);
+}
+
+Town::Town(){
+    setName("");
+    setLatitude(0.0);
+    setLongitude(0.0);
+}
+
 const std::string &Town::getName() const {
     return name;
 }
@@ -48,6 +61,14 @@ void Town::setClosesTownDistance(float closesTownDistance) {
     ClosesTownDistance = closesTownDistance;
 }
 
+float Town::getTownNumber() const {
+    return townNumber;
+}
+
+void Town::setTownNumber(float townNumber) {
+    Town::townNumber = townNumber;
+}
+
 Town Town::TownDist(Town two){
     float distance = RadiusEarth*acos((sin(latitude)*sin(two.latitude))+(cos(latitude)*cos(two.latitude)*cos(two.longitude - longitude)));
     if(distance < ClosesTownDistance){
@@ -55,6 +76,12 @@ Town Town::TownDist(Town two){
         setClosestTownNumber(two.townNumber);
     }
 }
+
+void Town::toString() const {
+    std::cout << "name " << name << ", latitude " << latitude << ", longitude " << longitude << ", TownNumber " << townNumber << std::endl;
+}
+
+
 
 
 
