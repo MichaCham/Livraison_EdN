@@ -7,6 +7,9 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <fstream>
+#include <stdio.h>
+
 
 Route::Route(std::vector<Town> TownList){
     setListTown(TownList);
@@ -14,7 +17,18 @@ Route::Route(std::vector<Town> TownList){
     FirstTown = ListTown[1];
 }
 
-const std::vector<Town> &Route::getListTown() const {
+std::vector<Town> ReadFile (std::string EntryFile){
+    std::ifstream file (EntryFile);
+    std::string text;
+    int line = 0;
+    while(getline (file, text)){
+        if(line != 0) {
+            std::cout << text;
+        }
+    }
+}
+
+const std::vector<Town> Route::getListTown() const {
     return ListTown;
 }
 
@@ -36,4 +50,8 @@ const Town &Route::getFirstTown() const {
 
 void Route::setFirstTown(const Town &firstTown) {
     FirstTown = firstTown;
+}
+
+const int *Route::getSolution() const {
+    return Solution;
 }

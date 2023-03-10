@@ -10,7 +10,9 @@
 
 class Town {
 public:
-    Town(std::string name, float longitude, float latitude);
+    Town(std::string name, float longitude, float latitude, float townNumber);
+
+    Town();
 
     const std::string &getName() const;
 
@@ -32,7 +34,11 @@ public:
 
     void setClosesTownDistance(float closesTownDistance);
 
-    Town TownDist(Town two);
+    float getTownNumber() const;
+
+    void setTownNumber(float townNumber);
+
+    bool TownDist(Town two);
 
 protected:
     std::string name;

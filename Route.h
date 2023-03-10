@@ -17,9 +17,7 @@ public:
 
     std::vector<Town> ReadFile (std::string EntryFile);
 
-    void WriteFile (std::string TownList);
-
-    const std::vector<Town> &getListTown() const;
+    const std::vector<Town> getListTown() const;
 
     void setListTown(const std::vector<Town> &listTown);
 
@@ -31,10 +29,13 @@ public:
 
     void setFirstTown(const Town &firstTown);
 
+    const int *getSolution() const;
+
 protected:
     std::vector<Town> ListTown;
     Town CurrentTown;
     Town FirstTown;
+    int Solution[];
 };
 
 
