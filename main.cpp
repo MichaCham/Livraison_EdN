@@ -11,7 +11,7 @@ int main() {
 
     std::vector<Town> newList;
     Route route(newList);
-    route.ReadFile("C:\\Users\\david\\CLionProjects\\ProjetProgra\\france_10.tsp");
+    route.ReadFile("C:\\Users\\CHAMPALET\\CLionProjects\\ProjetProgra\\france_10.tsp");
     for (int i = 0; i < route.getListTown().size(); i++){
         route.getListTown()[i].toString();
     }

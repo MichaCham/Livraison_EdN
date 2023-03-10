@@ -8,6 +8,14 @@
 
 class glouton {
 
+public:
+    glouton(int nb_ville);
+
+    void gloutonAlgorithme();
+
+protected:
+    std::vector<bool> boolVilles;
+
 };
 
 
