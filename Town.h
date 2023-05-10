@@ -38,7 +38,7 @@ public:
 
     void setTownNumber(float townNumber);
 
-    Town TownDist(Town two);
+    void TownDist(Town two);
 
     void toString() const;
 
@@ -50,6 +50,12 @@ protected:
     float ClosestTownNumber;
     float ClosesTownDistance;
     float pi = 3.141592;
+public:
+    static float getPi() const;
+
+    float getRadiusEarth() const;
+
+protected:
     float RadiusEarth = 6378.137;
 };
 

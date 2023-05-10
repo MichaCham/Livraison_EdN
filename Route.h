@@ -23,7 +23,6 @@ public:
 
     const std::vector<Town> &getListTown() const;
 
-
     void setListTown(const std::vector<Town> &listTown);
 
     const Town &getCurrentTown() const;
@@ -36,9 +35,10 @@ public:
 
     const std::vector<float> getSolution() const;
 
+    void getRandomSolution();
+
 protected:
     std::vector<Town> ListTown;
-    float Pi = 3.141592;
     Town CurrentTown;
     Town FirstTown;
     std::vector<float> Solution;

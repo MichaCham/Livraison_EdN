@@ -18,7 +18,7 @@ Route::Route(std::vector<Town> TownList){
 }
 
 float Route::ConvertToRadiant(float deg){
-    return (Pi * deg) / 180;
+    return (Town::getPi() * deg) / 180;
 }
 
 void Route::ReadFile (std::string EntryFile){
@@ -62,5 +62,9 @@ void Route::setFirstTown(const Town &firstTown) {
 
 const std::vector<float> Route::getSolution() const {
     return Solution;
+}
+
+void getRandomSolution(){
+
 }
 
