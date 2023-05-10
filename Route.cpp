@@ -4,6 +4,7 @@
 
 #include "Route.h"
 #include "Town.h"
+#include <utility>
 #include <vector>
 #include <string>
 #include <iostream>
@@ -13,16 +14,16 @@
 
 
 Route::Route(std::vector<Town> TownList){
-    ListTown = TownList;
+    ListTown = std::move(TownList);
     CurrentTown = Town("",0,0,0);
     FirstTown = Town("",0,0,0);
 }
 
 float Route::ConvertToRadiant(float deg){
-    return (Town::getPi() * deg) / 180;
+    return (CurrentTown.getPi() * deg) / 180;
 }
 
-void Route::ReadFile (std::string EntryFile){
+void Route::ReadFile (const std::string& EntryFile){
     std::ifstream file(EntryFile);
     int townNumber;
     file >> townNumber;
@@ -33,7 +34,7 @@ void Route::ReadFile (std::string EntryFile){
         float longitude;
         file >> name >> latitude >> longitude;
         std::cout << name << " " << latitude << " " << longitude << " " << i << std::endl;
-        ListTown.push_back(Town(name, ConvertToRadiant(latitude), ConvertToRadiant(longitude),i));
+        ListTown.emplace_back(name, ConvertToRadiant(latitude), ConvertToRadiant(longitude),i);
     }
 }
 
@@ -69,11 +70,11 @@ const std::vector<int> Route::getSolution() const {
     return Solution;
 }
 
-void getRandomSolution(){
+void Route::getRandomSolution(){
     std::vector<float> solution;
-    int size = Route::getListTown().size();
+    int size = getListTown().size();
     for (int i = 0; i < size; i++){
-        int rnumber = std::rand() % Route::getListTown().size();
+        int rnumber = std::rand() % getListTown().size();
     }
 }
 

@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ProjetProgra.dir/Glouton.cpp.obj"
   "CMakeFiles/ProjetProgra.dir/Glouton.cpp.obj.d"
-  "CMakeFiles/ProjetProgra.dir/RandomRoute.cpp.obj"
-  "CMakeFiles/ProjetProgra.dir/RandomRoute.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/Route.cpp.obj"
   "CMakeFiles/ProjetProgra.dir/Route.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/Town.cpp.obj"

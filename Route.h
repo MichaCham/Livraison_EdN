@@ -19,9 +19,9 @@ public:
 
     float ConvertToRadiant(float deg);
 
-    void ReadFile (std::string EntryFile);
+    void ReadFile (const std::string& EntryFile);
 
-    static const std::vector<Town> &getListTown() ;
+    const std::vector<Town> &getListTown() ;
 
     void setListTown(const std::vector<Town> &listTown);
 
@@ -40,7 +40,7 @@ public:
     void getRandomSolution();
 
 protected:
-    static std::vector<Town> ListTown;
+    std::vector<Town> ListTown;
     Town CurrentTown;
     Town FirstTown;
     std::vector<int> Solution;

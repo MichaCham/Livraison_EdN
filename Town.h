@@ -42,6 +42,10 @@ public:
 
     void toString() const;
 
+    float getPi() const;
+
+    float getRadiusEarth() const;
+
 protected:
     std::string name;
     float longitude;
@@ -50,12 +54,6 @@ protected:
     float ClosestTownNumber;
     float ClosesTownDistance;
     float pi = 3.141592;
-public:
-    static float getPi() const;
-
-    float getRadiusEarth() const;
-
-protected:
     float RadiusEarth = 6378.137;
 };
 
