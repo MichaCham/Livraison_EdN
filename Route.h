@@ -21,7 +21,7 @@ public:
 
     void ReadFile (std::string EntryFile);
 
-    const std::vector<Town> &getListTown() const;
+    static const std::vector<Town> &getListTown() ;
 
     void setListTown(const std::vector<Town> &listTown);
 
@@ -33,15 +33,17 @@ public:
 
     void setFirstTown(const Town &firstTown);
 
-    const std::vector<float> getSolution() const;
+    void addToSolution(Town t);
+
+    const std::vector<int> getSolution() const;
 
     void getRandomSolution();
 
 protected:
-    std::vector<Town> ListTown;
+    static std::vector<Town> ListTown;
     Town CurrentTown;
     Town FirstTown;
-    std::vector<float> Solution;
+    std::vector<int> Solution;
 };
 
 

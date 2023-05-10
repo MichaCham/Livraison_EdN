@@ -9,6 +9,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include <cstdlib>
 
 
 Route::Route(std::vector<Town> TownList){
@@ -36,7 +37,7 @@ void Route::ReadFile (std::string EntryFile){
     }
 }
 
-const std::vector<Town> &Route::getListTown() const {
+const std::vector<Town> &Route::getListTown() {
     return ListTown;
 }
 
@@ -60,11 +61,19 @@ void Route::setFirstTown(const Town &firstTown) {
     FirstTown = firstTown;
 }
 
-const std::vector<float> Route::getSolution() const {
+void Route::addToSolution(Town t) {
+
+}
+
+const std::vector<int> Route::getSolution() const {
     return Solution;
 }
 
 void getRandomSolution(){
-
+    std::vector<float> solution;
+    int size = Route::getListTown().size();
+    for (int i = 0; i < size; i++){
+        int rnumber = std::rand() % Route::getListTown().size();
+    }
 }
 
