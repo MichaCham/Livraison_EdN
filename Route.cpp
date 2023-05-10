@@ -60,7 +60,7 @@ void Route::setFirstTown(const Town &firstTown) {
     FirstTown = firstTown;
 }
 
-const int *Route::getSolution() const {
+const std::vector<float> Route::getSolution() const {
     return Solution;
 }
 

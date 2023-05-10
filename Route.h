@@ -15,6 +15,8 @@ class Route {
 public:
     Route(std::vector<Town> TownList);
 
+    Route();
+
     float ConvertToRadiant(float deg);
 
     void ReadFile (std::string EntryFile);
@@ -32,14 +34,14 @@ public:
 
     void setFirstTown(const Town &firstTown);
 
-    const int *getSolution() const;
+    const std::vector<float> getSolution() const;
 
 protected:
     std::vector<Town> ListTown;
     float Pi = 3.141592;
     Town CurrentTown;
     Town FirstTown;
-    int Solution[];
+    std::vector<float> Solution;
 };
 
 
