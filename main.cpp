@@ -14,7 +14,10 @@ int main() {
     Route route(newList);
     route.ReadFile("..\\france_10.tsp");
 
-    route.setCurrentTown(route.getListTown()[9]);
+    route.setFirstTown(route.getListTown()[1]);
+    route.setSolution(route.getRandomSolution());
+    for (int i = 0; i < (int)route.getSolution().size(); i++)
+        std::cout<< route.getSolution().at(i) <<std::endl;
 
     return 0;
 }

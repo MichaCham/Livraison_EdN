@@ -70,11 +70,21 @@ const std::vector<int> Route::getSolution() const {
     return Solution;
 }
 
-void Route::getRandomSolution(){
-    std::vector<float> solution;
-    int size = getListTown().size();
+std::vector<int> Route::getRandomSolution(){
+    std::vector<int> solution;
+    solution.push_back(getFirstTown().getTownNumber());
+    ListTown.erase (ListTown.begin()+getFirstTown().getTownNumber());
+    int size = ListTown.size();
     for (int i = 0; i < size; i++){
-        int rnumber = std::rand() % getListTown().size();
+        std::srand (time(NULL));
+        int rnumber = std::rand() % ListTown.size();
+        solution.push_back(ListTown[rnumber].getTownNumber());
+        ListTown.erase (ListTown.begin()+rnumber);
     }
+    return solution;
+}
+
+void Route::setSolution(const std::vector<int> &solution) {
+    Solution = solution;
 }
 

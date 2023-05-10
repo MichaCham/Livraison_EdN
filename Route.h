@@ -37,13 +37,15 @@ public:
 
     const std::vector<int> getSolution() const;
 
-    void getRandomSolution();
+    std::vector<int> getRandomSolution();
 
 protected:
     std::vector<Town> ListTown;
     Town CurrentTown;
     Town FirstTown;
     std::vector<int> Solution;
+public:
+    void setSolution(const std::vector<int> &solution);
 };
 
 
