@@ -11,17 +11,11 @@
 #include "Route.h"
 
 class Glouton {
-protected:
-    std::vector<bool> boolVilles;
 
 public:
     Glouton(int nbVille);
 
     void gloutonAlgorithme(Route route);
-
-    const std::vector<bool> &getBoolVilles() const;
-
-    void setBoolVilles(const std::vector<bool> &boolVilles);
 
     void toString() const;
 };

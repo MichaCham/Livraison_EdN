@@ -6,28 +6,18 @@
 #include "Glouton.h"
 
 Glouton::Glouton(int nbVille) {
-    boolVilles.assign(nbVille, false );
-    //toString();
 }
 void Glouton::gloutonAlgorithme(Route maRoute) {
-    std::vector<float> maSolution;
-    maSolution.push_back(maRoute.getCurrentTown().getTownNumber());
-    boolVilles[maRoute.getCurrentTown().getTownNumber()] = true;
-    //TODO : while (std::find(boolVilles.begin(), boolVilles.end(),))
+    std::vector<int> solution;
+    std::vector<Town> maListe =  maRoute.getListTown();
+    solution.push_back(maRoute.getFirstTown().getTownNumber());
+    maListe.erase(maListe.begin()+maRoute.getFirstTown().getTownNumber());
+    while (maListe.size() > 0){
+        //TODO: faire une fonction dans ROute pour avoir la ville la plus proche
+    }
+
     toString();
 }
 
-const std::vector<bool> &Glouton::getBoolVilles() const {
-    return boolVilles;
-}
-
-void Glouton::setBoolVilles(const std::vector<bool> &boolVilles) {
-    Glouton::boolVilles = boolVilles;
-}
-
 void Glouton::toString() const {
-    for(int i = 0; i<boolVilles.size(); i++){
-        std::cout << "bool :  " << boolVilles[i] << std::endl;
-    }
-
 }
