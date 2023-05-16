@@ -84,6 +84,31 @@ std::vector<int> Route::getRandomSolution(){
     return solution;
 }
 
+std::vector<int> Route::getGloutonSolution(){
+    std::vector<int> solution;
+    bool tmp;
+    int cpt;
+    solution.push_back(getFirstTown().getTownNumber());
+    setCurrentTown(getFirstTown());
+    ListTown.erase (ListTown.begin()+getFirstTown().getTownNumber());
+    int size = ListTown.size();
+    for (int i = 0; i < size; i++){
+        cpt = 200;
+        for(int y = 0; y < ListTown.size(); y++) {
+            if(CurrentTown.getName() != ListTown[y].getName()){
+                tmp = CurrentTown.TownDist(ListTown[y]);
+                if(tmp){
+                    cpt = y;
+                }
+            }
+        }
+        solution.push_back(ListTown[cpt].getTownNumber());
+        setCurrentTown(ListTown[cpt]);
+        ListTown.erase (ListTown.begin()+cpt);
+    }
+    return solution;
+}
+
 void Route::setSolution(const std::vector<int> &solution) {
     Solution = solution;
 }

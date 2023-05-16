@@ -39,6 +39,8 @@ public:
 
     std::vector<int> getRandomSolution();
 
+    std::vector<int> getGloutonSolution();
+
 protected:
     std::vector<Town> ListTown;
     Town CurrentTown;

@@ -38,7 +38,7 @@ public:
 
     void setTownNumber(float townNumber);
 
-    void TownDist(Town two);
+    bool TownDist(Town two);
 
     void toString() const;
 
