@@ -7,15 +7,16 @@
 #include "Route.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    //std::cout << "Hello, World!" << std::endl;
 
     std::vector<Town> newList;
     Route route(newList);
-    route.ReadFile("C:\\Users\\david\\CLionProjects\\ProjetProgra\\france_10.tsp");
-    for (int i = 0; i < route.getListTown().size(); i++){
-        route.getListTown()[i].toString();
-    }
+    route.ReadFile("..\\france_10.tsp");
 
+    route.setFirstTown(route.getListTown()[9]);
+    route.setSolution(route.getGloutonSolution());
+    for (int i = 0; i < (int)route.getSolution().size(); i++)
+        std::cout<< route.getSolution().at(i) <<" ";
 
     return 0;
 }

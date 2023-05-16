@@ -38,9 +38,13 @@ public:
 
     void setTownNumber(float townNumber);
 
-    Town TownDist(Town two);
+    bool TownDist(Town two);
 
     void toString() const;
+
+    float getPi() const;
+
+    float getRadiusEarth() const;
 
 protected:
     std::string name;

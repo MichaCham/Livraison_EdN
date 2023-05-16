@@ -4,24 +4,26 @@
 
 #include "Route.h"
 #include "Town.h"
+#include <utility>
 #include <vector>
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include <cstdlib>
 
 
 Route::Route(std::vector<Town> TownList){
-    ListTown = TownList;
+    ListTown = std::move(TownList);
     CurrentTown = Town("",0,0,0);
     FirstTown = Town("",0,0,0);
 }
 
 float Route::ConvertToRadiant(float deg){
-    return (Pi * deg) / 180;
+    return (CurrentTown.getPi() * deg) / 180;
 }
 
-void Route::ReadFile (std::string EntryFile){
+void Route::ReadFile (const std::string& EntryFile){
     std::ifstream file(EntryFile);
     int townNumber;
     file >> townNumber;
@@ -32,11 +34,11 @@ void Route::ReadFile (std::string EntryFile){
         float longitude;
         file >> name >> latitude >> longitude;
         std::cout << name << " " << latitude << " " << longitude << " " << i << std::endl;
-        ListTown.push_back(Town(name, ConvertToRadiant(latitude), ConvertToRadiant(longitude),i));
+        ListTown.emplace_back(name, ConvertToRadiant(latitude), ConvertToRadiant(longitude),i);
     }
 }
 
-const std::vector<Town> &Route::getListTown() const {
+const std::vector<Town> &Route::getListTown() {
     return ListTown;
 }
 
@@ -60,7 +62,54 @@ void Route::setFirstTown(const Town &firstTown) {
     FirstTown = firstTown;
 }
 
-const int *Route::getSolution() const {
+void Route::addToSolution(Town t) {
+
+}
+
+const std::vector<int> Route::getSolution() const {
     return Solution;
+}
+
+std::vector<int> Route::getRandomSolution(){
+    std::vector<int> solution;
+    solution.push_back(getFirstTown().getTownNumber());
+    ListTown.erase (ListTown.begin()+getFirstTown().getTownNumber());
+    int size = ListTown.size();
+    for (int i = 0; i < size; i++){
+        std::srand (time(NULL));
+        int rnumber = std::rand() % ListTown.size();
+        solution.push_back(ListTown[rnumber].getTownNumber());
+        ListTown.erase (ListTown.begin()+rnumber);
+    }
+    return solution;
+}
+
+std::vector<int> Route::getGloutonSolution(){
+    std::vector<int> solution;
+    bool tmp;
+    int cpt;
+    solution.push_back(getFirstTown().getTownNumber());
+    setCurrentTown(getFirstTown());
+    ListTown.erase (ListTown.begin()+getFirstTown().getTownNumber());
+    int size = ListTown.size();
+    for (int i = 0; i < size; i++){
+        cpt = 200;
+        for(int y = 0; y < ListTown.size(); y++) {
+            if(CurrentTown.getName() != ListTown[y].getName()){
+                tmp = CurrentTown.TownDist(ListTown[y]);
+                if(tmp){
+                    cpt = y;
+                }
+            }
+        }
+        solution.push_back(ListTown[cpt].getTownNumber());
+        setCurrentTown(ListTown[cpt]);
+        ListTown.erase (ListTown.begin()+cpt);
+    }
+    return solution;
+}
+
+void Route::setSolution(const std::vector<int> &solution) {
+    Solution = solution;
 }
 
