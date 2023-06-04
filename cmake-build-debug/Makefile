@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\david\Desktop\progavanc\Livraison_EdN
+CMAKE_SOURCE_DIR = C:\Users\david\Desktop\progavanc\WorkBack\Livraison_EdN
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\david\Desktop\progavanc\Livraison_EdN\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\david\Desktop\progavanc\WorkBack\Livraison_EdN\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\david\Desktop\progavanc\Livraison_EdN\cmake-build-debug\CMakeFiles C:\Users\david\Desktop\progavanc\Livraison_EdN\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\david\Desktop\progavanc\WorkBack\Livraison_EdN\cmake-build-debug\CMakeFiles C:\Users\david\Desktop\progavanc\WorkBack\Livraison_EdN\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\david\Desktop\progavanc\Livraison_EdN\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\david\Desktop\progavanc\WorkBack\Livraison_EdN\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,30 +128,6 @@ ProjetProgra/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/build
 .PHONY : ProjetProgra/fast
 
-Glouton.obj: Glouton.cpp.obj
-.PHONY : Glouton.obj
-
-# target to build an object file
-Glouton.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/Glouton.cpp.obj
-.PHONY : Glouton.cpp.obj
-
-Glouton.i: Glouton.cpp.i
-.PHONY : Glouton.i
-
-# target to preprocess a source file
-Glouton.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/Glouton.cpp.i
-.PHONY : Glouton.cpp.i
-
-Glouton.s: Glouton.cpp.s
-.PHONY : Glouton.s
-
-# target to generate assembly for a file
-Glouton.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/Glouton.cpp.s
-.PHONY : Glouton.cpp.s
-
 Route.obj: Route.cpp.obj
 .PHONY : Route.obj
 
@@ -175,6 +151,126 @@ Route.s: Route.cpp.s
 Route.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/Route.cpp.s
 .PHONY : Route.cpp.s
+
+Solution.obj: Solution.cpp.obj
+.PHONY : Solution.obj
+
+# target to build an object file
+Solution.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/Solution.cpp.obj
+.PHONY : Solution.cpp.obj
+
+Solution.i: Solution.cpp.i
+.PHONY : Solution.i
+
+# target to preprocess a source file
+Solution.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/Solution.cpp.i
+.PHONY : Solution.cpp.i
+
+Solution.s: Solution.cpp.s
+.PHONY : Solution.s
+
+# target to generate assembly for a file
+Solution.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/Solution.cpp.s
+.PHONY : Solution.cpp.s
+
+SolutionGlouton.obj: SolutionGlouton.cpp.obj
+.PHONY : SolutionGlouton.obj
+
+# target to build an object file
+SolutionGlouton.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionGlouton.cpp.obj
+.PHONY : SolutionGlouton.cpp.obj
+
+SolutionGlouton.i: SolutionGlouton.cpp.i
+.PHONY : SolutionGlouton.i
+
+# target to preprocess a source file
+SolutionGlouton.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionGlouton.cpp.i
+.PHONY : SolutionGlouton.cpp.i
+
+SolutionGlouton.s: SolutionGlouton.cpp.s
+.PHONY : SolutionGlouton.s
+
+# target to generate assembly for a file
+SolutionGlouton.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionGlouton.cpp.s
+.PHONY : SolutionGlouton.cpp.s
+
+SolutionRandom.obj: SolutionRandom.cpp.obj
+.PHONY : SolutionRandom.obj
+
+# target to build an object file
+SolutionRandom.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionRandom.cpp.obj
+.PHONY : SolutionRandom.cpp.obj
+
+SolutionRandom.i: SolutionRandom.cpp.i
+.PHONY : SolutionRandom.i
+
+# target to preprocess a source file
+SolutionRandom.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionRandom.cpp.i
+.PHONY : SolutionRandom.cpp.i
+
+SolutionRandom.s: SolutionRandom.cpp.s
+.PHONY : SolutionRandom.s
+
+# target to generate assembly for a file
+SolutionRandom.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionRandom.cpp.s
+.PHONY : SolutionRandom.cpp.s
+
+SolutionReinsertion.obj: SolutionReinsertion.cpp.obj
+.PHONY : SolutionReinsertion.obj
+
+# target to build an object file
+SolutionReinsertion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionReinsertion.cpp.obj
+.PHONY : SolutionReinsertion.cpp.obj
+
+SolutionReinsertion.i: SolutionReinsertion.cpp.i
+.PHONY : SolutionReinsertion.i
+
+# target to preprocess a source file
+SolutionReinsertion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionReinsertion.cpp.i
+.PHONY : SolutionReinsertion.cpp.i
+
+SolutionReinsertion.s: SolutionReinsertion.cpp.s
+.PHONY : SolutionReinsertion.s
+
+# target to generate assembly for a file
+SolutionReinsertion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionReinsertion.cpp.s
+.PHONY : SolutionReinsertion.cpp.s
+
+SolutionVoisin.obj: SolutionVoisin.cpp.obj
+.PHONY : SolutionVoisin.obj
+
+# target to build an object file
+SolutionVoisin.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionVoisin.cpp.obj
+.PHONY : SolutionVoisin.cpp.obj
+
+SolutionVoisin.i: SolutionVoisin.cpp.i
+.PHONY : SolutionVoisin.i
+
+# target to preprocess a source file
+SolutionVoisin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionVoisin.cpp.i
+.PHONY : SolutionVoisin.cpp.i
+
+SolutionVoisin.s: SolutionVoisin.cpp.s
+.PHONY : SolutionVoisin.s
+
+# target to generate assembly for a file
+SolutionVoisin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionVoisin.cpp.s
+.PHONY : SolutionVoisin.cpp.s
 
 Town.obj: Town.cpp.obj
 .PHONY : Town.obj
@@ -233,12 +329,24 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ProjetProgra
-	@echo ... Glouton.obj
-	@echo ... Glouton.i
-	@echo ... Glouton.s
 	@echo ... Route.obj
 	@echo ... Route.i
 	@echo ... Route.s
+	@echo ... Solution.obj
+	@echo ... Solution.i
+	@echo ... Solution.s
+	@echo ... SolutionGlouton.obj
+	@echo ... SolutionGlouton.i
+	@echo ... SolutionGlouton.s
+	@echo ... SolutionRandom.obj
+	@echo ... SolutionRandom.i
+	@echo ... SolutionRandom.s
+	@echo ... SolutionReinsertion.obj
+	@echo ... SolutionReinsertion.i
+	@echo ... SolutionReinsertion.s
+	@echo ... SolutionVoisin.obj
+	@echo ... SolutionVoisin.i
+	@echo ... SolutionVoisin.s
 	@echo ... Town.obj
 	@echo ... Town.i
 	@echo ... Town.s

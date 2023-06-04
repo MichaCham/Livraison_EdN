@@ -38,8 +38,6 @@ public:
 
     void setTownNumber(float townNumber);
 
-    bool TownDist(Town two);
-
     void toString() const;
 
     float getPi() const;

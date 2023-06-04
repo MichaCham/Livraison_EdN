@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/david/Desktop/progavanc/Livraison_EdN
+# Install script for directory: C:/Users/david/Desktop/progavanc/WorkBack/Livraison_EdN
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/david/Desktop/progavanc/Livraison_EdN/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/david/Desktop/progavanc/WorkBack/Livraison_EdN/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
