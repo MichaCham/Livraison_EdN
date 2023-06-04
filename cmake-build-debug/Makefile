@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\CHAMPALET\CLionProjects\Livraison_EdN
+CMAKE_SOURCE_DIR = C:\Users\david\Desktop\progavanc\WorkQ7\Livraison_EdN
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\CHAMPALET\CLionProjects\Livraison_EdN\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\david\Desktop\progavanc\WorkQ7\Livraison_EdN\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\CHAMPALET\CLionProjects\Livraison_EdN\cmake-build-debug\CMakeFiles C:\Users\CHAMPALET\CLionProjects\Livraison_EdN\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\david\Desktop\progavanc\WorkQ7\Livraison_EdN\cmake-build-debug\CMakeFiles C:\Users\david\Desktop\progavanc\WorkQ7\Livraison_EdN\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\CHAMPALET\CLionProjects\Livraison_EdN\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\david\Desktop\progavanc\WorkQ7\Livraison_EdN\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -127,6 +127,54 @@ ProjetProgra: cmake_check_build_system
 ProjetProgra/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/build
 .PHONY : ProjetProgra/fast
+
+InterfaceVoisinage.obj: InterfaceVoisinage.cpp.obj
+.PHONY : InterfaceVoisinage.obj
+
+# target to build an object file
+InterfaceVoisinage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/InterfaceVoisinage.cpp.obj
+.PHONY : InterfaceVoisinage.cpp.obj
+
+InterfaceVoisinage.i: InterfaceVoisinage.cpp.i
+.PHONY : InterfaceVoisinage.i
+
+# target to preprocess a source file
+InterfaceVoisinage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/InterfaceVoisinage.cpp.i
+.PHONY : InterfaceVoisinage.cpp.i
+
+InterfaceVoisinage.s: InterfaceVoisinage.cpp.s
+.PHONY : InterfaceVoisinage.s
+
+# target to generate assembly for a file
+InterfaceVoisinage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/InterfaceVoisinage.cpp.s
+.PHONY : InterfaceVoisinage.cpp.s
+
+MeilleureSolution.obj: MeilleureSolution.cpp.obj
+.PHONY : MeilleureSolution.obj
+
+# target to build an object file
+MeilleureSolution.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/MeilleureSolution.cpp.obj
+.PHONY : MeilleureSolution.cpp.obj
+
+MeilleureSolution.i: MeilleureSolution.cpp.i
+.PHONY : MeilleureSolution.i
+
+# target to preprocess a source file
+MeilleureSolution.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/MeilleureSolution.cpp.i
+.PHONY : MeilleureSolution.cpp.i
+
+MeilleureSolution.s: MeilleureSolution.cpp.s
+.PHONY : MeilleureSolution.s
+
+# target to generate assembly for a file
+MeilleureSolution.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/MeilleureSolution.cpp.s
+.PHONY : MeilleureSolution.cpp.s
 
 Route.obj: Route.cpp.obj
 .PHONY : Route.obj
@@ -248,6 +296,30 @@ SolutionReinsertion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionReinsertion.cpp.s
 .PHONY : SolutionReinsertion.cpp.s
 
+SolutionTwoOpt.obj: SolutionTwoOpt.cpp.obj
+.PHONY : SolutionTwoOpt.obj
+
+# target to build an object file
+SolutionTwoOpt.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionTwoOpt.cpp.obj
+.PHONY : SolutionTwoOpt.cpp.obj
+
+SolutionTwoOpt.i: SolutionTwoOpt.cpp.i
+.PHONY : SolutionTwoOpt.i
+
+# target to preprocess a source file
+SolutionTwoOpt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionTwoOpt.cpp.i
+.PHONY : SolutionTwoOpt.cpp.i
+
+SolutionTwoOpt.s: SolutionTwoOpt.cpp.s
+.PHONY : SolutionTwoOpt.s
+
+# target to generate assembly for a file
+SolutionTwoOpt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionTwoOpt.cpp.s
+.PHONY : SolutionTwoOpt.cpp.s
+
 SolutionVoisin.obj: SolutionVoisin.cpp.obj
 .PHONY : SolutionVoisin.obj
 
@@ -329,6 +401,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ProjetProgra
+	@echo ... InterfaceVoisinage.obj
+	@echo ... InterfaceVoisinage.i
+	@echo ... InterfaceVoisinage.s
+	@echo ... MeilleureSolution.obj
+	@echo ... MeilleureSolution.i
+	@echo ... MeilleureSolution.s
 	@echo ... Route.obj
 	@echo ... Route.i
 	@echo ... Route.s
@@ -344,6 +422,9 @@ help:
 	@echo ... SolutionReinsertion.obj
 	@echo ... SolutionReinsertion.i
 	@echo ... SolutionReinsertion.s
+	@echo ... SolutionTwoOpt.obj
+	@echo ... SolutionTwoOpt.i
+	@echo ... SolutionTwoOpt.s
 	@echo ... SolutionVoisin.obj
 	@echo ... SolutionVoisin.i
 	@echo ... SolutionVoisin.s

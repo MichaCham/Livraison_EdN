@@ -19,17 +19,21 @@ std::vector<Town> SolutionReinsertion::reinsertion(Solution solution, int x, int
 }
 
 std::vector<Town> SolutionReinsertion::reinsertionParIndex(Solution solution, int x) {
-    int i;
-    int y;
+    int i = 0;
+    int y = 0;
     if (x < (solution.getSoluce().size() - 2)){
         i = 0;
         y = x + 1;
     }else{
-        int i = (x - 1) / (solution.getSoluce().size() / 2);
-        int y = (x - 1) % (solution.getSoluce().size() / 2);
+        i = (x - 1) / (solution.getSoluce().size() / 2);
+        y = (x - 1) % (solution.getSoluce().size() / 2);
         if (y >= i - 1){
             y = y + 2;
         }
     }
     return reinsertion(solution, i, y);
+}
+
+std::vector<Town> SolutionReinsertion::getBetterSolution(Solution s, float x) {
+    return reinsertionParIndex(s,x);
 }

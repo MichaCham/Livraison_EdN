@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ProjetProgra.dir/InterfaceVoisinage.cpp.obj"
+  "CMakeFiles/ProjetProgra.dir/InterfaceVoisinage.cpp.obj.d"
+  "CMakeFiles/ProjetProgra.dir/MeilleureSolution.cpp.obj"
+  "CMakeFiles/ProjetProgra.dir/MeilleureSolution.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/Route.cpp.obj"
   "CMakeFiles/ProjetProgra.dir/Route.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/Solution.cpp.obj"
@@ -9,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ProjetProgra.dir/SolutionRandom.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/SolutionReinsertion.cpp.obj"
   "CMakeFiles/ProjetProgra.dir/SolutionReinsertion.cpp.obj.d"
+  "CMakeFiles/ProjetProgra.dir/SolutionTwoOpt.cpp.obj"
+  "CMakeFiles/ProjetProgra.dir/SolutionTwoOpt.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/SolutionVoisin.cpp.obj"
   "CMakeFiles/ProjetProgra.dir/SolutionVoisin.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/Town.cpp.obj"

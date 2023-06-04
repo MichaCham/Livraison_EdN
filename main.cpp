@@ -9,44 +9,57 @@
 #include "SolutionGlouton.h"
 #include "SolutionVoisin.h"
 #include "SolutionReinsertion.h"
+#include "MeilleureSolution.h"
+#include "SolutionTwoOpt.h"
 
  int main() {
-    //std::cout << "Hello, World!" << std::endl;
+     //std::cout << "Hello, World!" << std::endl;
 
-    std::vector<Town> newList;
-    Route route(newList);
-    Route route2(newList);
-    route.ReadFile("..\\france_10.tsp");
-    route2.ReadFile("..\\france_10.tsp");
+     std::vector<Town> newList;
+     Route route(newList);
+     Route route2(newList);
+     route.ReadFile("..\\france_50.tsp");
+     route2.ReadFile("..\\france_50.tsp");
 
-    route.setFirstTown(route.getListTown()[9]);
-    route2.setFirstTown(route2.getListTown()[9]);
-    SolutionRandom Sr(route) ;
-    SolutionGlouton Sg(route2);
-    Sr.getSolution();
-    for (int i = 0; i < (int)Sr.getSoluce().size(); i++)
-        std::cout<<Sr.getSoluce().at(i).getTownNumber() <<" ";
+     route.setFirstTown(route.getListTown()[9]);
+     route2.setFirstTown(route2.getListTown()[9]);
+     SolutionRandom Sr(route);
+     SolutionGlouton Sg(route2);
+     Sr.getSolution();
+     for (int i = 0; i < (int) Sr.getSoluce().size(); i++)
+         std::cout << Sr.getSoluce().at(i).getTownNumber() << " ";
 
-    std::cout<<std::endl<<"GLOUTON TIME : "<<std::endl;
-    Sg.getSolution();
-    for (int i = 0; i < (int)Sg.getSoluce().size(); i++)
-        std::cout<<Sg.getSoluce().at(i).getTownNumber() <<" ";
+     std::cout << std::endl << "GLOUTON TIME : " << std::endl;
+     Sg.getSolution();
+     for (int i = 0; i < (int) Sg.getSoluce().size(); i++)
+         std::cout << Sg.getSoluce().at(i).getTownNumber() << " ";
+     std::cout<<std::endl<<"Distance obtenue glouton : "<<Sg.getAllDist()<<std::endl;
 
-    std::cout<<std::endl<<"Swap entre premier et dernier"<<std::endl;
-    SolutionVoisin Sv;
-    Sv.setSoluce(Sv.echange(Sg,0,9));
-     for (int i = 0; i < (int)Sv.getSoluce().size(); i++)
-         std::cout<<Sv.getSoluce().at(i).getTownNumber() <<" ";
+     /*std::cout << std::endl << "Swap entre premier et dernier" << std::endl;
+     SolutionVoisin Sv;
+     Sv.setSoluce(Sv.echange(Sg, 0, 9));
+     for (int i = 0; i < (int) Sv.getSoluce().size(); i++)
+         std::cout << Sv.getSoluce().at(i).getTownNumber() << " ";*/
 
-     std::cout<<std::endl<<"Insertion du premier a la place du 3eme"<<std::endl;
+     /*std::cout << std::endl << "Insertion du premier a la place du 3eme" << std::endl;
      SolutionReinsertion Sre;
-     Sre.setSoluce(Sre.reinsertion(Sg,0,2));
-     for (int i = 0; i < (int)Sre.getSoluce().size(); i++)
-         std::cout<<Sre.getSoluce().at(i).getTownNumber() <<" ";
+     Sre.setSoluce(Sre.reinsertion(Sg, 0, 2));
+     for (int i = 0; i < (int) Sre.getSoluce().size(); i++)
+         std::cout << Sre.getSoluce().at(i).getTownNumber() << " ";*/
 
-     std::cout<<std::endl<<"TestReinsertionParIndex "<<std::endl;
-     Sre.setSoluce(Sre.reinsertionParIndex(Sg,3));
-     for (int i = 0; i < (int)Sre.getSoluce().size(); i++)
-         std::cout<<Sre.getSoluce().at(i).getTownNumber() <<" ";
-     return 0;
-}
+     Solution finalSolution;
+     SolutionVoisin SolV;
+     SolutionReinsertion SolR;
+     SolutionTwoOpt SolT;
+     MeilleureSolution MV;
+     finalSolution = MV.meilleure_ameliorante(Sg, &SolV);
+     for (int i = 0; i < (int) finalSolution.getSoluce().size(); i++)
+         std::cout << finalSolution.getSoluce().at(i).getTownNumber() << " ";
+     std::cout<<std::endl<<"Distance obtenue finale : "<<finalSolution.getAllDist()<<std::endl;
+
+     MeilleureSolution MV2;
+     finalSolution = MV2.algorithme_descente(Sg, &SolT);
+     for (int i = 0; i < (int) finalSolution.getSoluce().size(); i++)
+         std::cout << finalSolution.getSoluce().at(i).getTownNumber() << " ";
+     std::cout<<std::endl<<"Distance obtenue finale : "<<finalSolution.getAllDist()<<std::endl;
+ }

@@ -26,6 +26,8 @@ public:
 
     virtual void getSolution();
 
+    float getDistanceTown(Town one, Town two);
+
     bool TownDist(Town one, Town two);
 
     int getCloseTownNumber() const;
@@ -35,6 +37,8 @@ public:
     float getCloseTownDistance() const;
 
     void setCloseTownDistance(float closeTownDistance);
+
+    float getAllDist();
 
 protected:
     std::vector<Town> soluce;
