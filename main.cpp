@@ -8,6 +8,7 @@
 #include "SolutionRandom.h"
 #include "SolutionGlouton.h"
 #include "SolutionVoisin.h"
+#include "SolutionReinsertion.h"
 
  int main() {
     //std::cout << "Hello, World!" << std::endl;
@@ -36,5 +37,16 @@
     Sv.setSoluce(Sv.echange(Sg,0,9));
      for (int i = 0; i < (int)Sv.getSoluce().size(); i++)
          std::cout<<Sv.getSoluce().at(i).getTownNumber() <<" ";
-    return 0;
+
+     std::cout<<std::endl<<"Insertion du premier a la place du 3eme"<<std::endl;
+     SolutionReinsertion Sre;
+     Sre.setSoluce(Sre.reinsertion(Sg,0,2));
+     for (int i = 0; i < (int)Sre.getSoluce().size(); i++)
+         std::cout<<Sre.getSoluce().at(i).getTownNumber() <<" ";
+
+     std::cout<<std::endl<<"TestReinsertionParIndex "<<std::endl;
+     Sre.setSoluce(Sre.reinsertionParIndex(Sg,3));
+     for (int i = 0; i < (int)Sre.getSoluce().size(); i++)
+         std::cout<<Sre.getSoluce().at(i).getTownNumber() <<" ";
+     return 0;
 }

@@ -224,6 +224,30 @@ SolutionRandom.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionRandom.cpp.s
 .PHONY : SolutionRandom.cpp.s
 
+SolutionReinsertion.obj: SolutionReinsertion.cpp.obj
+.PHONY : SolutionReinsertion.obj
+
+# target to build an object file
+SolutionReinsertion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionReinsertion.cpp.obj
+.PHONY : SolutionReinsertion.cpp.obj
+
+SolutionReinsertion.i: SolutionReinsertion.cpp.i
+.PHONY : SolutionReinsertion.i
+
+# target to preprocess a source file
+SolutionReinsertion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionReinsertion.cpp.i
+.PHONY : SolutionReinsertion.cpp.i
+
+SolutionReinsertion.s: SolutionReinsertion.cpp.s
+.PHONY : SolutionReinsertion.s
+
+# target to generate assembly for a file
+SolutionReinsertion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionReinsertion.cpp.s
+.PHONY : SolutionReinsertion.cpp.s
+
 SolutionVoisin.obj: SolutionVoisin.cpp.obj
 .PHONY : SolutionVoisin.obj
 
@@ -317,6 +341,9 @@ help:
 	@echo ... SolutionRandom.obj
 	@echo ... SolutionRandom.i
 	@echo ... SolutionRandom.s
+	@echo ... SolutionReinsertion.obj
+	@echo ... SolutionReinsertion.i
+	@echo ... SolutionReinsertion.s
 	@echo ... SolutionVoisin.obj
 	@echo ... SolutionVoisin.i
 	@echo ... SolutionVoisin.s
