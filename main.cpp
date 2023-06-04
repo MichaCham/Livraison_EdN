@@ -34,9 +34,9 @@
 
     std::cout<<std::endl<<"Swap entre premier et dernier"<<std::endl;
     SolutionVoisin Sv;
-    Sv.setSoluce(Sv.echange(Sg,0,9));
+    /*Sv.setSoluce(Sv.echange(Sg,0,9));
      for (int i = 0; i < (int)Sv.getSoluce().size(); i++)
-         std::cout<<Sv.getSoluce().at(i).getTownNumber() <<" ";
+         std::cout<<Sv.getSoluce().at(i).getTownNumber() <<" ";*/
 
      std::cout<<std::endl<<"Insertion du premier a la place du 3eme"<<std::endl;
      SolutionReinsertion Sre;
@@ -48,5 +48,10 @@
      Sre.setSoluce(Sre.reinsertionParIndex(Sg,3));
      for (int i = 0; i < (int)Sre.getSoluce().size(); i++)
          std::cout<<Sre.getSoluce().at(i).getTownNumber() <<" ";
+
+     std::cout<<std::endl<<"Swap opt2  "<<std::endl;
+     Sv.setSoluce(Sv.twoOpt(Sg,0,9));
+     for (int i = 0; i < (int)Sre.getSoluce().size(); i++)
+         std::cout<<Sv.getSoluce().at(i).getTownNumber() <<" ";
      return 0;
 }
