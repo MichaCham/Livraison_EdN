@@ -21,6 +21,7 @@ public:
     void setMaRoute(const Route &maRoute);*/
 
     std::vector<Town> echange(Solution s, int x, int y);
+    std::vector<Town> echange_par_index(Solution solution, int index);
 
 
 };

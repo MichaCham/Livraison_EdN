@@ -2,6 +2,7 @@
 // Created by CHAMPALET on 16/05/2023.
 //
 #include "SolutionVoisin.h"
+#include <cmath>
 /*
 SolutionVoisin::SolutionVoisin(Solution _maSolution) {
     this->maSolution = _maSolution;
@@ -9,20 +10,14 @@ SolutionVoisin::SolutionVoisin(Solution _maSolution) {
 */
 std::vector<Town> SolutionVoisin::echange(Solution solution, int x, int y) {
     std::vector<Town> tmpTL = solution.getSoluce();
-    /*for (auto ville: solution.getSoluce())
-        ville.toString();*/
-
     std::swap(tmpTL[x], tmpTL[y]);
-
-    /*for (int i = 0; i < (int)tmpTL.size(); i++)
-        tmpTL.at(i).toString();*/
     return tmpTL;
 }
 
-/*const Route &SolutionVoisin::getMaRoute() const {
-    return maRoute;
+std::vector<Town> SolutionVoisin::echange_par_index(Solution solution, int index){
+    float n = (1 + sqrt(1 + 8 * index)) / 2;
+    float i = index - (n * (n - 1)) / 2;
+    float j = solution.getSoluce().size() - n + i;
+    return SolutionVoisin::echange (solution, i, j);
 }
 
-void SolutionVoisin::setMaRoute(const Route &maRoute) {
-    SolutionVoisin::maRoute = maRoute;
-}*/
