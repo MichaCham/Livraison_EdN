@@ -71,17 +71,6 @@ void Town::setTownNumber(float townNumber) {
     Town::townNumber = townNumber;
 }
 
-bool Town::TownDist(Town two){
-    float distance = RadiusEarth*acos((sin(latitude)*sin(two.latitude))+(cos(latitude)*cos(two.latitude)*cos(two.longitude - longitude)));
-    if(distance < ClosesTownDistance){
-        setClosesTownDistance(distance);
-        setClosestTownNumber(two.townNumber);
-        return true;
-    }else{
-        return false;
-    }
-}
-
 void Town::toString() const {
     std::cout << "name " << name << ", latitude " << latitude << ", longitude " << longitude << ", TownNumber " << townNumber << std::endl;
 }

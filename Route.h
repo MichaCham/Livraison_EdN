@@ -37,9 +37,7 @@ public:
 
     const std::vector<int> getSolution() const;
 
-    std::vector<int> getRandomSolution();
-
-    std::vector<int> getGloutonSolution();
+    //std::vector<int> getGloutonSolution();
 
 protected:
     std::vector<Town> ListTown;

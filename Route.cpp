@@ -19,6 +19,11 @@ Route::Route(std::vector<Town> TownList){
     FirstTown = Town("",0,0,0);
 }
 
+Route::Route(){
+    CurrentTown = Town("",0,0,0);
+    FirstTown = Town("",0,0,0);
+}
+
 float Route::ConvertToRadiant(float deg){
     return (CurrentTown.getPi() * deg) / 180;
 }
@@ -70,21 +75,7 @@ const std::vector<int> Route::getSolution() const {
     return Solution;
 }
 
-std::vector<int> Route::getRandomSolution(){
-    std::vector<int> solution;
-    solution.push_back(getFirstTown().getTownNumber());
-    ListTown.erase (ListTown.begin()+getFirstTown().getTownNumber());
-    int size = ListTown.size();
-    for (int i = 0; i < size; i++){
-        std::srand (time(NULL));
-        int rnumber = std::rand() % ListTown.size();
-        solution.push_back(ListTown[rnumber].getTownNumber());
-        ListTown.erase (ListTown.begin()+rnumber);
-    }
-    return solution;
-}
-
-std::vector<int> Route::getGloutonSolution(){
+/*std::vector<int> Route::getGloutonSolution(){
     std::vector<int> solution;
     bool tmp;
     int cpt;
@@ -111,5 +102,5 @@ std::vector<int> Route::getGloutonSolution(){
 
 void Route::setSolution(const std::vector<int> &solution) {
     Solution = solution;
-}
+}*/
 
