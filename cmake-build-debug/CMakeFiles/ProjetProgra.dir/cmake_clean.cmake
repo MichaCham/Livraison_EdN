@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ProjetProgra.dir/Glouton.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/Route.cpp.obj"
   "CMakeFiles/ProjetProgra.dir/Route.cpp.obj.d"
+  "CMakeFiles/ProjetProgra.dir/SolutionVoisine.cpp.obj"
+  "CMakeFiles/ProjetProgra.dir/SolutionVoisine.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/Town.cpp.obj"
   "CMakeFiles/ProjetProgra.dir/Town.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/main.cpp.obj"

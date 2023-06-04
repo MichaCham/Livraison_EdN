@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\david\Desktop\progavanc\Livraison_EdN
+CMAKE_SOURCE_DIR = C:\Users\CHAMPALET\CLionProjects\Livraison_EdN
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\david\Desktop\progavanc\Livraison_EdN\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\CHAMPALET\CLionProjects\Livraison_EdN\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\david\Desktop\progavanc\Livraison_EdN\cmake-build-debug\CMakeFiles C:\Users\david\Desktop\progavanc\Livraison_EdN\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\CHAMPALET\CLionProjects\Livraison_EdN\cmake-build-debug\CMakeFiles C:\Users\CHAMPALET\CLionProjects\Livraison_EdN\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\david\Desktop\progavanc\Livraison_EdN\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\CHAMPALET\CLionProjects\Livraison_EdN\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,30 @@ Route.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/Route.cpp.s
 .PHONY : Route.cpp.s
 
+SolutionVoisine.obj: SolutionVoisine.cpp.obj
+.PHONY : SolutionVoisine.obj
+
+# target to build an object file
+SolutionVoisine.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionVoisine.cpp.obj
+.PHONY : SolutionVoisine.cpp.obj
+
+SolutionVoisine.i: SolutionVoisine.cpp.i
+.PHONY : SolutionVoisine.i
+
+# target to preprocess a source file
+SolutionVoisine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionVoisine.cpp.i
+.PHONY : SolutionVoisine.cpp.i
+
+SolutionVoisine.s: SolutionVoisine.cpp.s
+.PHONY : SolutionVoisine.s
+
+# target to generate assembly for a file
+SolutionVoisine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionVoisine.cpp.s
+.PHONY : SolutionVoisine.cpp.s
+
 Town.obj: Town.cpp.obj
 .PHONY : Town.obj
 
@@ -239,6 +263,9 @@ help:
 	@echo ... Route.obj
 	@echo ... Route.i
 	@echo ... Route.s
+	@echo ... SolutionVoisine.obj
+	@echo ... SolutionVoisine.i
+	@echo ... SolutionVoisine.s
 	@echo ... Town.obj
 	@echo ... Town.i
 	@echo ... Town.s
