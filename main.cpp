@@ -55,11 +55,23 @@
      finalSolution = MV.meilleure_ameliorante(Sg, &SolV);
      for (int i = 0; i < (int) finalSolution.getSoluce().size(); i++)
          std::cout << finalSolution.getSoluce().at(i).getTownNumber() << " ";
-     std::cout<<std::endl<<"Distance obtenue finale : "<<finalSolution.getAllDist()<<std::endl;
+     std::cout<<std::endl<<"Distance obtenue finale meilleure ameliorante : "<<finalSolution.getAllDist()<<std::endl;
 
      MeilleureSolution MV2;
      finalSolution = MV2.algorithme_descente(Sg, &SolT);
      for (int i = 0; i < (int) finalSolution.getSoluce().size(); i++)
          std::cout << finalSolution.getSoluce().at(i).getTownNumber() << " ";
-     std::cout<<std::endl<<"Distance obtenue finale : "<<finalSolution.getAllDist()<<std::endl;
+     std::cout<<std::endl<<"Distance obtenue finale descente : "<<finalSolution.getAllDist()<<std::endl;
+
+     finalSolution = MV2.premiere_ameliorante(Sg, &SolR);
+     for (int i = 0; i < (int) finalSolution.getSoluce().size(); i++)
+         std::cout << finalSolution.getSoluce().at(i).getTownNumber() << " ";
+     std::cout<<std::endl<<"Distance obtenue finale premiere ameliorante : "<<finalSolution.getAllDist()<<std::endl;
+
+     finalSolution = MV2.random_premiere_ameliorante(Sg, &SolR);
+     for (int i = 0; i < (int) finalSolution.getSoluce().size(); i++)
+         std::cout << finalSolution.getSoluce().at(i).getTownNumber() << " ";
+     std::cout<<std::endl<<"Distance obtenue finale random premiere ameliorante : "<<finalSolution.getAllDist()<<std::endl;
+
+     return 0;
  }

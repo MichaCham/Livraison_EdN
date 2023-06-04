@@ -13,6 +13,8 @@ class MeilleureSolution {
 public:
     Solution meilleure_ameliorante(Solution s, InterfaceVoisinage *v);
     Solution algorithme_descente(Solution s, InterfaceVoisinage *v);
+    Solution premiere_ameliorante(Solution s, InterfaceVoisinage *v);
+    Solution random_premiere_ameliorante(Solution s, InterfaceVoisinage *v);
 protected:
 };
 
