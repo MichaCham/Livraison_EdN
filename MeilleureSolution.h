@@ -19,6 +19,8 @@ public:
     Solution premiere_ameliorante(Solution s, InterfaceVoisinage *v);
     //Returns the first upgraded solution in random order
     Solution random_premiere_ameliorante(Solution s, InterfaceVoisinage *v);
+    //Returns the best soolution using a list of Voisinage
+    Solution recherche_locale_voisinage_variable(Solution s, std::vector<InterfaceVoisinage> *v);
 protected:
 };
 

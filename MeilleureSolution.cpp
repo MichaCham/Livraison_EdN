@@ -72,3 +72,19 @@ Solution MeilleureSolution::random_premiere_ameliorante(Solution solution, Inter
     }
     return meilleure_solution;
 }
+
+Solution MeilleureSolution::recherche_locale_voisinage_variable(Solution solution, std::vector<InterfaceVoisinage> *v) {
+    Solution meilleure_solution = solution;
+    float meilleure_distance = solution.getAllDist();
+    Solution tempSolution;
+    float tempDistance;
+    for (InterfaceVoisinage voisin : *v){
+        tempSolution = algorithme_descente(solution,&voisin);
+        tempDistance = tempSolution.getAllDist();
+        if(tempDistance < meilleure_distance){
+            meilleure_solution = tempSolution;
+            meilleure_distance = tempDistance;
+        }
+    }
+    return meilleure_solution;
+}

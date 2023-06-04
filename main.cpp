@@ -73,5 +73,13 @@
          std::cout << finalSolution.getSoluce().at(i).getTownNumber() << " ";
      std::cout<<std::endl<<"Distance obtenue finale random premiere ameliorante : "<<finalSolution.getAllDist()<<std::endl;
 
-     return 0;
+     //Question 10, souci de passage de l'override avec le vecteur
+     /*std::vector<InterfaceVoisinage> vectorVoisinage;
+     vectorVoisinage.push_back(SolR);
+     vectorVoisinage.push_back(SolV);
+     finalSolution = MV2.recherche_locale_voisinage_variable(Sg, &vectorVoisinage);
+     for (int i = 0; i < (int) finalSolution.getSoluce().size(); i++)
+         std::cout << finalSolution.getSoluce().at(i).getTownNumber() << " ";
+     std::cout<<std::endl<<"Distance obtenue finale Liste Voisinage : "<<finalSolution.getAllDist()<<std::endl;
+     return 0;*/
  }
