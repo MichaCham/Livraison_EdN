@@ -8,10 +8,10 @@ SolutionGlouton::SolutionGlouton(Route Ro) : Solution(Ro) {
 }
 
 void SolutionGlouton::getSolution() {
-    std::vector<int> solution;
+    std::vector<Town> solution;
     bool tmp;
     int cpt;
-    solution.push_back(route.getFirstTown().getTownNumber());
+    solution.push_back(route.getFirstTown());
     route.setCurrentTown(route.getFirstTown());
     std::vector<Town> tmpLT = route.getListTown();
     tmpLT.erase (tmpLT.begin()+route.getFirstTown().getTownNumber());
@@ -28,7 +28,7 @@ void SolutionGlouton::getSolution() {
                 }
             }
         }
-        solution.push_back(tmpLT[cpt].getTownNumber());
+        solution.push_back(tmpLT[cpt]);
         route.setCurrentTown(tmpLT[cpt]);
         tmpLT.erase (tmpLT.begin()+cpt);
     }

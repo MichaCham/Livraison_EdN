@@ -224,6 +224,30 @@ SolutionRandom.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionRandom.cpp.s
 .PHONY : SolutionRandom.cpp.s
 
+SolutionVoisin.obj: SolutionVoisin.cpp.obj
+.PHONY : SolutionVoisin.obj
+
+# target to build an object file
+SolutionVoisin.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionVoisin.cpp.obj
+.PHONY : SolutionVoisin.cpp.obj
+
+SolutionVoisin.i: SolutionVoisin.cpp.i
+.PHONY : SolutionVoisin.i
+
+# target to preprocess a source file
+SolutionVoisin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionVoisin.cpp.i
+.PHONY : SolutionVoisin.cpp.i
+
+SolutionVoisin.s: SolutionVoisin.cpp.s
+.PHONY : SolutionVoisin.s
+
+# target to generate assembly for a file
+SolutionVoisin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjetProgra.dir\build.make CMakeFiles/ProjetProgra.dir/SolutionVoisin.cpp.s
+.PHONY : SolutionVoisin.cpp.s
+
 Town.obj: Town.cpp.obj
 .PHONY : Town.obj
 
@@ -293,6 +317,9 @@ help:
 	@echo ... SolutionRandom.obj
 	@echo ... SolutionRandom.i
 	@echo ... SolutionRandom.s
+	@echo ... SolutionVoisin.obj
+	@echo ... SolutionVoisin.i
+	@echo ... SolutionVoisin.s
 	@echo ... Town.obj
 	@echo ... Town.i
 	@echo ... Town.s

@@ -12,13 +12,15 @@ class Solution {
 public:
     Solution(Route R);
 
+    Solution();
+
     const Route &getR() const;
 
-    const std::vector<int> &getSoluce() const;
+    const std::vector<Town> &getSoluce() const;
 
     float getPi() const;
 
-    void setSoluce(const std::vector<int> &soluce);
+    void setSoluce(const std::vector<Town> &soluce);
 
     float getRadiusEarth() const;
 
@@ -35,7 +37,7 @@ public:
     void setCloseTownDistance(float closeTownDistance);
 
 protected:
-    std::vector<int> soluce;
+    std::vector<Town> soluce;
     Route route;
     float pi = 3.141592;
     float RadiusEarth = 6378.137;

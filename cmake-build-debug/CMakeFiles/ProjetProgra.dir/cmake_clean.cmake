@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ProjetProgra.dir/SolutionGlouton.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/SolutionRandom.cpp.obj"
   "CMakeFiles/ProjetProgra.dir/SolutionRandom.cpp.obj.d"
+  "CMakeFiles/ProjetProgra.dir/SolutionVoisin.cpp.obj"
+  "CMakeFiles/ProjetProgra.dir/SolutionVoisin.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/Town.cpp.obj"
   "CMakeFiles/ProjetProgra.dir/Town.cpp.obj.d"
   "CMakeFiles/ProjetProgra.dir/main.cpp.obj"

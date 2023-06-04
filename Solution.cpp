@@ -10,10 +10,14 @@ Solution::Solution(Route Ro) {
     route = Ro;
 }
 
+Solution::Solution(){
+
+}
+
 const Route &Solution::getR() const {
     return route;
 }
-const std::vector<int> &Solution::getSoluce() const {
+const std::vector<Town> &Solution::getSoluce() const {
     return soluce;
 }
 float Solution::getPi() const {
@@ -38,7 +42,7 @@ bool Solution::TownDist(Town one, Town two) {
     }
 }
 
-void Solution::setSoluce(const std::vector<int> &soluce) {
+void Solution::setSoluce(const std::vector<Town> &soluce) {
     Solution::soluce = soluce;
 }
 

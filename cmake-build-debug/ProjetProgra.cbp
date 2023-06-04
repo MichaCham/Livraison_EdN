@@ -106,6 +106,12 @@
 		<Unit filename="C:/Users/david/Desktop/progavanc/WorkBack/Livraison_EdN/SolutionRandom.h">
 			<Option target="ProjetProgra"/>
 		</Unit>
+		<Unit filename="C:/Users/david/Desktop/progavanc/WorkBack/Livraison_EdN/SolutionVoisin.cpp">
+			<Option target="ProjetProgra"/>
+		</Unit>
+		<Unit filename="C:/Users/david/Desktop/progavanc/WorkBack/Livraison_EdN/SolutionVoisin.h">
+			<Option target="ProjetProgra"/>
+		</Unit>
 		<Unit filename="C:/Users/david/Desktop/progavanc/WorkBack/Livraison_EdN/Town.cpp">
 			<Option target="ProjetProgra"/>
 		</Unit>
