@@ -11,9 +11,13 @@
 
 class MeilleureSolution {
 public:
+    //Return the best upgraded Solution
     Solution meilleure_ameliorante(Solution s, InterfaceVoisinage *v);
+    //Returns the best upgraded Solution using Local Search
     Solution algorithme_descente(Solution s, InterfaceVoisinage *v);
+    //Returns the first upgraded solution
     Solution premiere_ameliorante(Solution s, InterfaceVoisinage *v);
+    //Returns the first upgraded solution in random order
     Solution random_premiere_ameliorante(Solution s, InterfaceVoisinage *v);
 protected:
 };

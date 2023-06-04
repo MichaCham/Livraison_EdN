@@ -11,14 +11,19 @@
 
 class InterfaceVoisinage {
 public:
+    //Returns Soluce
     const std::vector<Town> &getSoluce() const;
 
+    //Sets Soluce
     void setSoluce(const std::vector<Town> &soluce);
 
+    //Gives out the new Solution According to Calculation Type (Voisin, Two_OPT)
     virtual std::vector<Town> getBetterSolution(Solution s, float x);
 
+    //Calculate Dist between Two Towns
     float getTownDist(Town one, Town two);
 
+    //Return Global Dist
     float getAllDist();
 
 public:

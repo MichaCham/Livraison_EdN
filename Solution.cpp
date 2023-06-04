@@ -14,17 +14,8 @@ Solution::Solution(){
 
 }
 
-const Route &Solution::getR() const {
-    return route;
-}
 const std::vector<Town> &Solution::getSoluce() const {
     return soluce;
-}
-float Solution::getPi() const {
-    return pi;
-}
-float Solution::getRadiusEarth() const {
-    return RadiusEarth;
 }
 
 void Solution::getSolution() {
@@ -48,10 +39,6 @@ bool Solution::TownDist(Town one, Town two) {
 
 void Solution::setSoluce(const std::vector<Town> &soluce) {
     Solution::soluce = soluce;
-}
-
-int Solution::getCloseTownNumber() const {
-    return CloseTownNumber;
 }
 
 void Solution::setCloseTownNumber(int closeTownNumber) {

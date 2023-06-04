@@ -10,7 +10,10 @@
 
 class SolutionRandom : public Solution {
 public:
+    //Constructor
     SolutionRandom(Route Ro);
+
+    //Override getSolution using Random solution
     void getSolution() override;
 protected:
 };

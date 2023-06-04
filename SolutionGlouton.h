@@ -10,7 +10,10 @@
 
 class SolutionGlouton : public Solution {
 public:
+    //Constructor
     SolutionGlouton(Route Ro);
+
+    //Overrided version, to get best solutuion using Glouton
     void getSolution() override;
 protected:
 };

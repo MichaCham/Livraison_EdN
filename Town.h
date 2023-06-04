@@ -10,39 +10,50 @@
 
 class Town {
 public:
+    //Constructor
     Town(std::string name, float longitude, float latitude, float townNumber);
 
+    //Constructor
     Town();
 
+    //Return name
     const std::string &getName() const;
 
+    //Sets Name
     void setName(const std::string &name);
 
+    //Return Longitude
     float getLongitude() const;
 
+    //Sets Longitude
     void setLongitude(float longitude);
 
+    //Return Latitude
     float getLatitude() const;
 
+    //Sets Latitude
     void setLatitude(float latitude);
 
+    //Return ClosestTownNumber
     float getClosestTownNumber() const;
 
+    //Sets ClosestTownNumber
     void setClosestTownNumber(float closestTownNumber);
 
-    float getClosesTownDistance() const;
-
+    //Sets ClosestTownDistance
     void setClosesTownDistance(float closesTownDistance);
 
+    //Returns TownNumber
     float getTownNumber() const;
 
+    //Sets TownNumber
     void setTownNumber(float townNumber);
 
+    //Display
     void toString() const;
 
+    //Returns Pi
     float getPi() const;
-
-    float getRadiusEarth() const;
 
 protected:
     std::string name;

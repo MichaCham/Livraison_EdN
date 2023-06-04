@@ -13,31 +13,35 @@
 
 class Route {
 public:
+    //Constructor
     Route(std::vector<Town> TownList);
 
+    //Constructor
     Route();
 
+    //Convert Degree to Radiant
     float ConvertToRadiant(float deg);
 
+    //Reads file and fills townList
     void ReadFile (const std::string& EntryFile);
 
+    //Returns TownList
     const std::vector<Town> &getListTown() ;
 
+    //Sets List Town
     void setListTown(const std::vector<Town> &listTown);
 
+    //Returns Current Town
     const Town &getCurrentTown() const;
 
+    //Sets Current Town
     void setCurrentTown(const Town &currentTown);
 
+    //Returns First Town
     const Town &getFirstTown() const;
 
+    //Sets First Town
     void setFirstTown(const Town &firstTown);
-
-    void addToSolution(Town t);
-
-    const std::vector<int> getSolution() const;
-
-    //std::vector<int> getGloutonSolution();
 
 protected:
     std::vector<Town> ListTown;
@@ -45,7 +49,6 @@ protected:
     Town FirstTown;
     std::vector<int> Solution;
 public:
-    void setSolution(const std::vector<int> &solution);
 };
 
 

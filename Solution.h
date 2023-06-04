@@ -10,34 +10,37 @@
 
 class Solution {
 public:
+    //Constructor
     Solution(Route R);
 
+    //Constructor
     Solution();
 
-    const Route &getR() const;
-
+    //Returns Solution
     const std::vector<Town> &getSoluce() const;
 
-    float getPi() const;
-
+    //Sets Solution
     void setSoluce(const std::vector<Town> &soluce);
 
-    float getRadiusEarth() const;
-
+    //Sets the Solution and gets the best Solution
     virtual void getSolution();
 
+    //Returns Distance between Two Town
     float getDistanceTown(Town one, Town two);
 
+    //Returns Distance between two Town, if it's smaller than the max one, returns true;
     bool TownDist(Town one, Town two);
 
-    int getCloseTownNumber() const;
-
+    //Sets The closestTownNumber
     void setCloseTownNumber(int closeTownNumber);
 
+    //Gets The ClosesTownDistance
     float getCloseTownDistance() const;
 
+    //Sets the ClosestTownDistance
     void setCloseTownDistance(float closeTownDistance);
 
+    //Returns the Global Dist
     float getAllDist();
 
 protected:

@@ -55,10 +55,6 @@ void Town::setClosestTownNumber(float closestTownNumber) {
     ClosestTownNumber = closestTownNumber;
 }
 
-float Town::getClosesTownDistance() const {
-    return ClosesTownDistance;
-}
-
 void Town::setClosesTownDistance(float closesTownDistance) {
     ClosesTownDistance = closesTownDistance;
 }
@@ -77,10 +73,6 @@ void Town::toString() const {
 
 float Town::getPi() const {
     return pi;
-}
-
-float Town::getRadiusEarth() const {
-    return RadiusEarth;
 }
 
 
