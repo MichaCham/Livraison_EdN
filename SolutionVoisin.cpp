@@ -3,11 +3,7 @@
 //
 #include "SolutionVoisin.h"
 #include <cmath>
-/*
-SolutionVoisin::SolutionVoisin(Solution _maSolution) {
-    this->maSolution = _maSolution;
-}
-*/
+
 std::vector<Town> SolutionVoisin::echange(Solution solution, int x, int y) {
     std::vector<Town> tmpTL = solution.getSoluce();
     std::swap(tmpTL[x], tmpTL[y]);
